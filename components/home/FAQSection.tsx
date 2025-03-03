@@ -65,7 +65,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gray-100 relative overflow-hidden bg-[#FFF9F6]" style={{ zIndex: 0 }}>
+    <section className="py-16 md:py-24 relative overflow-hidden bg-[#FFF9F6]" style={{ zIndex: 0 }}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-6">
           {/* Header */}
