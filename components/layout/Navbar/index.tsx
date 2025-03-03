@@ -8,7 +8,7 @@ import { Menu } from 'lucide-react'
 
 const Navbar = () => {
     return (
-        <nav className="fixed top-0 w-full z-50 bg-transparent py-4">
+        <nav className="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-sm py-4">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between">
 

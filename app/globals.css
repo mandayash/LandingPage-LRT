@@ -66,6 +66,7 @@
 
 .poppins {
   font-family: var(--font-poppins);
+  line-height: 2;
 }
 
 /* @layer base {
