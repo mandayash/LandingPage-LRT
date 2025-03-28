@@ -41,7 +41,7 @@ const newsData = [
   }
 ];
 
-const NewsSection = () => {
+const NewsSection = ({ hideHeader = false}) => {
   return (
     <section className="py-16 md:py-24 bg-white relative overflow-hidden" style={{ zIndex: 0 }}>
       <div className="container mx-auto px-4">
@@ -49,6 +49,7 @@ const NewsSection = () => {
           {/* Container */}
           <div className="flex flex-col gap-6">
             {/* Bagian Header */}
+            {!hideHeader && (
             <div>
               <div className="mb-6">
                 {/* Section Number */}
@@ -63,6 +64,7 @@ const NewsSection = () => {
                 </h2>
               </div>
             </div>
+            )}
 
             {/* News Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -83,7 +85,7 @@ const NewsSection = () => {
 
                     {/* News Content */}
                     <div className="flex flex-col flex-grow">
-                      <h3 className="text-2xl font-bold text-gray-800 mb-3 font-poppins">{newsItem.title}</h3>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-3 font-poppins text-justify">{newsItem.title}</h3>
                       <p className="text-gray-400 flex-grow text-lg">{newsItem.content}</p>
                     </div>
                     
@@ -112,7 +114,7 @@ const NewsSection = () => {
                     {/* Read More Button */}
                     <div className="pt-4">
                       <Link 
-                        href={`/news/${newsItem.id}`} 
+                        href={`/artikel/${newsItem.id}`} 
                         className="inline-block bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-colors"
                       >
                         Baca Selengkapnya

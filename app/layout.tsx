@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer"
+import AppPromo from "@/components/home/AppPromo";
 
 const sfPro = localFont({
   src: [
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body className="sfPro">
         <Navbar />
         {children}
+        <AppPromo />
         <Footer />
       </body>
     </html>
