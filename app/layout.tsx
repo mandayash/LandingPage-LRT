@@ -1,29 +1,28 @@
+// app/layout.tsx
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer"
-import AppPromo from "@/components/home/AppPromo";
+import Footer from "@/components/layout/Footer";
+import AppPromoWrapper from "@/components/layout/AppPromoWrapper";
 
 const sfPro = localFont({
   src: [
     {
-    path: './fonts/SFPRODISPLAYREGULAR.woff2',
-    weight: '400',
-    style: 'normal',
+      path: './fonts/SFPRODISPLAYREGULAR.woff2',
+      weight: '400',
+      style: 'normal',
     },
-
-  {
-    path: './fonts/SFPRODISPLAYMEDIUM.woff2',
-    weight: '500',
-    style: 'normal',
-  },
-
-  {
-    path: './fonts/SFPRODISPLAYBOLD.woff2',
-    weight: '700',
-    style: 'normal',
-  }
+    {
+      path: './fonts/SFPRODISPLAYMEDIUM.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/SFPRODISPLAYBOLD.woff2',
+      weight: '700',
+      style: 'normal',
+    }
   ],
   variable: '--font-sf-pro',
 });
@@ -34,7 +33,6 @@ const poppins = Poppins({
   variable: '--font-poppins'
 });
 
-
 export default function RootLayout({
   children,
 }: {
@@ -44,10 +42,12 @@ export default function RootLayout({
     <html lang="id" className={`${sfPro.variable} ${poppins.variable}`}>
       <body className="sfPro">
         <Navbar />
-        {children}
-        <AppPromo />
+        <main>
+          {children}
+        </main>
+        <AppPromoWrapper />
         <Footer />
       </body>
     </html>
-  )
+  );
 }

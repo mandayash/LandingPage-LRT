@@ -13,8 +13,8 @@ const AppPromo = () => {
             <Image
               src="/images/mockup-lrt.png"
               alt="LRT Apps Mockup"
-              width={600}
-              height={700}
+              width={912}
+              height={725}
               className="w-full h-full object-contain"
               priority
             />
