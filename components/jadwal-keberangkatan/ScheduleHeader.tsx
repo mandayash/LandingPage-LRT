@@ -4,7 +4,7 @@ const ScheduleHeader = () => {
         <h1 className="text-3xl md:text-4xl font-bold mb-4 font-poppins">
           Jadwal Keberangkatan LRT Sumatera Selatan
         </h1>
-        <p className="text-gray-400 mb-8">
+        <p className="text-gray-400 mb-8 text-justify">
           Perjalanan LRT Palembang pada stasiun DJKA dimulai sejak pukul 05.00 WIB dan berakhir pada 19.01 WIB. Sementara untuk yang dari Bandara beroperasi sejak pukul 06.00 WIB dan berakhir pada 19.50 WIB.
         </p>
   

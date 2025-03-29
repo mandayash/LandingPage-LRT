@@ -46,9 +46,7 @@ const NavLink = ({ href, children, isMobile = false, onClick }: NavLinkProps) =>
 
 const menuItems = [
     { href: '/', label: 'Beranda' },
-    { href: '/layanan', label: 'Layanan' },
     { href: '/informasi', label: 'Informasi' },
-    { href: '/tentang-kami', label: 'Tentang Kami' },
     { href: '/kontak', label: 'Hubungi Kami' },
 ]
 

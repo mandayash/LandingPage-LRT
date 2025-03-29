@@ -1,5 +1,5 @@
 import RouteInfo from "@/components/informasi-rute/RouteInfo";
-import AppPromo from "@/components/home/AppPromo";
+
 
 export default function InformasiRutePage() {
   return (

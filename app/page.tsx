@@ -1,3 +1,4 @@
+// app/page.tsx
 import Image from "next/image";
 import Hero from "@/components/home/Hero"
 import AppPromo from "@/components/home/AppPromo"
@@ -6,17 +7,21 @@ import Features from "@/components/home/Features"
 import NewsSection from "@/components/home/NewsSection"
 import FAQSection from "@/components/home/FAQSection"
 
-
 export default function Home() {
   return (
     <main>
-      {/* Section Hero untuk menguji navbar transparan */}
-      <Hero />
+      <div id="hero">
+        <Hero />
+      </div>
+      
       <AppPromo />
       <AboutLRT />
       <Features />
       <NewsSection />
-      <FAQSection />
+      
+      <div id="faq">
+        <FAQSection />
+      </div>
     </main>
   )
 }

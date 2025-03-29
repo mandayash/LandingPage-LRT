@@ -1,12 +1,17 @@
-// components/informasi-rute/RouteInfo.tsx
 'use client'
-import { useState } from "react";
-import RouteStation from "./RouteStation";
-import RouteMap from "./RouteMap";
-import RouteNotice from "./RouteNotice";
+
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import RouteStation from "@/components/informasi-rute/RouteStation";
+import RouteMap from "@/components/informasi-rute/RouteMap";
+import RouteNotice from "@/components/informasi-rute/RouteNotice";
 
 const RouteInfo = () => {
-  const [selectedStationId, setSelectedStationId] = useState<number | undefined>(undefined);
+  const searchParams = useSearchParams();
+  const stationParam = searchParams.get('station');
+  const [selectedStationId, setSelectedStationId] = useState<number | undefined>(
+    stationParam ? parseInt(stationParam) : undefined
+  );
   
   // Data stasiun
   const stations = [
@@ -24,7 +29,19 @@ const RouteInfo = () => {
     { id: 12, name: "Stasiun Bandara" },
   ];
 
-  // Handler untuk memilih stasiun
+
+  useEffect(() => {
+    if (stationParam) {
+      setTimeout(() => {
+        const mapElement = document.getElementById('route-map');
+        if (mapElement) {
+          mapElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500); 
+    }
+  }, [stationParam]);
+
+
   const handleSelectStation = (id: number) => {
     setSelectedStationId(id);
   
@@ -75,6 +92,7 @@ const RouteInfo = () => {
                   isFirst={index === 0}
                   isLast={index === stations.length - 1}
                   onSelect={handleSelectStation}
+                  isActive={selectedStationId === station.id}
                 />
               ))}
             </div>
