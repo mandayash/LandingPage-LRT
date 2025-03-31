@@ -101,7 +101,7 @@ const SearchDropdown = () => {
         <div className="absolute top-full left-0 right-0 z-50 mt-2 bg-white rounded-lg shadow-lg max-h-80 overflow-y-auto">
           {filteredStations.length > 0 ? (
             <ul className="py-2 divide-y divide-gray-300">
-              {filteredStations.map((station, index) => (
+              {filteredStations.map((station) => (
                 <li key={station.id}>
                   <button
                     className="px-4 py-3 w-full text-left hover:bg-gray-200 transition-colors duration-150 text-gray-700"

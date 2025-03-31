@@ -1,12 +1,13 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import RouteStation from "@/components/informasi-rute/RouteStation";
 import RouteMap from "@/components/informasi-rute/RouteMap";
 import RouteNotice from "@/components/informasi-rute/RouteNotice";
 
-const RouteInfo = () => {
+
+function RouteInfoContent() {
   const searchParams = useSearchParams();
   const stationParam = searchParams.get('station');
   const [selectedStationId, setSelectedStationId] = useState<number | undefined>(
@@ -106,6 +107,15 @@ const RouteInfo = () => {
         </div>
       </div>
     </div>
+  );
+}
+
+// Komponen utama dengan Suspense
+const RouteInfo = () => {
+  return (
+    <Suspense fallback={<div>Loading route information...</div>}>
+      <RouteInfoContent />
+    </Suspense>
   );
 };
 

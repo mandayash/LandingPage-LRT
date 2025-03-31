@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from "react"
-
 const Footer = () => {
   return (
     <footer id="footer" className="bg-black text-white py-10">
