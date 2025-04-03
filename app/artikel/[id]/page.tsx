@@ -59,6 +59,43 @@ const artikelData = [
       },
     ],
   },
+  {
+    id: "3",
+    title: "Promo Akhir Tahun: Diskon Tiket LRT hingga 50%!",
+    date: "10 Maret 2025",
+    imagePath: "/images/gambar3-lrt.png",
+    likes: 18,
+    shares: 9,
+    content: [
+      {
+        paragraphs: [
+          "Dalam rangka menyambut pergantian tahun, LRT Sumatera Selatan menghadirkan promo spesial bertajuk “Promo Akhir Tahun” dengan memberikan potongan harga tiket hingga 50%. Promo ini berlaku sepanjang bulan Desember 2025 dan menjadi kesempatan emas bagi masyarakat untuk menikmati perjalanan hemat menggunakan moda transportasi modern dan ramah lingkungan ini.",
+          "Diskon ini khusus diberikan kepada pengguna yang membeli tiket melalui aplikasi resmi LRT Sumsel. Aplikasi tersebut tidak hanya memudahkan pembelian tiket secara digital, tetapi juga menyediakan berbagai fitur pendukung seperti informasi jadwal keberangkatan, estimasi waktu tiba, dan notifikasi real-time yang memudahkan mobilitas sehari-hari.",
+          "Pihak manajemen LRT Sumatera Selatan menyampaikan bahwa promo ini merupakan bentuk apresiasi atas dukungan masyarakat selama ini terhadap layanan transportasi publik yang aman, nyaman, dan bebas polusi. Dengan hadirnya potongan harga ini, diharapkan semakin banyak masyarakat yang beralih ke LRT, terutama selama musim liburan akhir tahun.",
+          "Tidak hanya ditujukan bagi warga lokal, promo ini juga bisa dinikmati oleh wisatawan yang tengah berkunjung ke Palembang dan ingin menjelajahi kota dengan lebih efisien. LRT Sumsel terus berkomitmen untuk menjadi solusi transportasi masa depan yang praktis dan berkelanjutan.",
+          "Segera manfaatkan promo akhir tahun ini dan nikmati diskon tiket LRT hingga 50% selama bulan Desember! Unduh aplikasi resmi LRT Sumsel sekarang, rencanakan perjalanan Anda, dan rasakan pengalaman transportasi publik yang cepat, hemat, dan ramah lingkungan.",
+        ],
+      }
+    ]
+  },
+  {
+    id: "4",
+    title: "Promo Akhir Tahun: Diskon Tiket LRT hingga 50%!",
+    date: "10 Maret 2025",
+    imagePath: "/images/gambar3-lrt.png",
+    likes: 18,
+    shares: 9,
+    content: [
+      {
+        paragraphs: [
+          "Dalam upaya memberikan layanan transportasi publik yang aman dan nyaman, LRT Palembang secara konsisten melakukan perawatan rutin terhadap jalur dan armada kereta. Langkah ini menjadi bagian penting dari komitmen LRT Sumatera Selatan untuk menjaga standar operasional dan meningkatkan kualitas pelayanan kepada seluruh penumpang.",
+          "Tim teknis yang berpengalaman diturunkan secara berkala untuk melakukan pemeriksaan menyeluruh. Proses perawatan meliputi pengecekan kebersihan, sistem kelistrikan, serta performa kereta. Setiap komponen diuji agar tetap berada dalam kondisi optimal, guna memastikan perjalanan berjalan lancar tanpa hambatan.",
+          "Kebersihan menjadi perhatian utama, terutama di masa pascapandemi di mana standar kebersihan publik semakin tinggi. Selain itu, sistem kelistrikan yang menjadi tulang punggung operasional LRT juga terus dimonitor untuk mencegah gangguan teknis yang dapat menghambat perjalanan. Tak kalah penting, performa kereta dicek secara detail agar setiap perjalanan terasa nyaman, tenang, dan tepat waktu bagi para penumpang.",
+          "Dengan adanya perawatan rutin ini, LRT Palembang berupaya menjaga kepercayaan masyarakat terhadap layanan transportasi modern yang ramah lingkungan ini. Upaya ini juga menunjukkan bahwa keamanan dan kenyamanan penumpang tetap menjadi prioritas utama dalam setiap aspek operasional.",
+        ],
+      }
+    ]
+  }
 ];
 
 export default function Page({ params }: { params: { id: string } }) {
@@ -73,7 +110,7 @@ export default function Page({ params }: { params: { id: string } }) {
       <div className="container mx-auto px-4">
         <ArtikelDetail
           title={artikel.title}
-          date={artikel.date}
+          date={artikel.date} 
           imagePath={artikel.imagePath}
           content={artikel.content}
           likes={artikel.likes}

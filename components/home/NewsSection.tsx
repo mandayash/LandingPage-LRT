@@ -85,13 +85,13 @@ const NewsSection = ({ hideHeader = false}) => {
 
                     {/* News Content */}
                     <div className="flex flex-col flex-grow">
-                      <h3 className="text-2xl font-bold text-gray-800 mb-3 font-poppins text-justify">{newsItem.title}</h3>
-                      <p className="text-gray-400 flex-grow text-lg">{newsItem.content}</p>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-3 font-poppins text-left">{newsItem.title}</h3>
+                      <p className="text-gray-400 flex-grow text-lg text-justify">{newsItem.content}</p>
                     </div>
                     
                     {/* Likes, Share & Date */}
                     <div className="flex items-center justify-between pt-4">
-                      <div className="flex gap-2">
+                      {/* <div className="flex gap-2">
                         <div className="flex items-center gap-1">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M16.2801 22.1H12.4801C11.9201 22.1 10.7001 21.93 10.0501 21.28L7.02011 18.94L7.94011 17.75L11.0401 20.15C11.2901 20.39 11.9201 20.59 12.4801 20.59H16.2801C17.1801 20.59 18.1501 19.87 18.3501 19.06L20.7701 11.71C20.9301 11.27 20.9001 10.87 20.6901 10.58C20.4701 10.27 20.0701 10.09 19.5801 10.09H15.5801C15.0601 10.09 14.5801 9.86999 14.2501 9.48999C13.9101 9.09999 13.7601 8.57999 13.8401 8.03999L14.3401 4.82999C14.4601 4.26999 14.0801 3.63999 13.5401 3.45999C13.0501 3.27999 12.4201 3.53999 12.2001 3.85999L8.10011 9.95999L6.86011 9.12999L10.9601 3.02999C11.5901 2.08999 12.9701 1.63999 14.0501 2.04999C15.3001 2.45999 16.1001 3.83999 15.8201 5.11999L15.3301 8.26999C15.3201 8.33999 15.3201 8.43999 15.3901 8.51999C15.4401 8.56999 15.5101 8.59999 15.5901 8.59999H19.5901C20.5701 8.59999 21.4201 9.00999 21.9201 9.71999C22.4101 10.41 22.5101 11.32 22.1901 12.2L19.8001 19.48C19.4301 20.93 17.8901 22.1 16.2801 22.1Z" fill="#828282"/>
@@ -106,9 +106,9 @@ const NewsSection = ({ hideHeader = false}) => {
                           </svg>
                           <span className="text-gray-400">{newsItem.shares}</span>
                         </div>
-                      </div>
+                      </div> */}
                       
-                      <span className="text-gray-400 text-sm">{newsItem.date}</span>
+                      {/* <span className="text-gray-400 text-sm">{newsItem.date}</span> */}
                     </div>
 
                     {/* Read More Button */}
