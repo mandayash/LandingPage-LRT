@@ -30,18 +30,16 @@ const Navbar = () => {
   };
 
   const scrollToSection = (sectionId: string) => {
-    // Cek apakah kita berada di homepage
+
     const isHomePage = window.location.pathname === '/';
     
     if (isHomePage) {
-      // Jika di homepage, scroll ke section
       const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
         setIsMobileMenuOpen(false);
       }
     } else {
-      // Jika bukan di homepage, gunakan router Next.js
       router.push(`/#${sectionId}`);
       setIsMobileMenuOpen(false);
     }
