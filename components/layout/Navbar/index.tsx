@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -8,6 +9,8 @@ import { Menu, X } from "lucide-react";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,9 +30,19 @@ const Navbar = () => {
   };
 
   const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    // Cek apakah kita berada di homepage
+    const isHomePage = window.location.pathname === '/';
+    
+    if (isHomePage) {
+      // Jika di homepage, scroll ke section
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+        setIsMobileMenuOpen(false);
+      }
+    } else {
+      // Jika bukan di homepage, gunakan router Next.js
+      router.push(`/#${sectionId}`);
       setIsMobileMenuOpen(false);
     }
   };
